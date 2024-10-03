@@ -8,6 +8,14 @@ public class Main {
         assert fraction.toString() == "je suis une fraction avec comme numerateur :11 et comme denominateur : 7";
         assert fraction1.toString() == "je suis une fraction avec comme numerateur :2 et comme denominateur : 1";
         assert fraction2.toString() == "je suis une fraction avec comme numerateur :0 et comme denominateur : 1";
+        assert fraction.intValue() == 2;
+        assert fraction1.floatValue() == 2.0;
+        assert fraction2.add(fraction)==new Fraction(4, 6);
+        assert fraction.add(fraction1)==new Fraction(7, 3);
+        assert fraction.equals(fraction)==true;
+        assert fraction1.equals(fraction)==false;
+        assert fraction2.compareTo(fraction2)==0;
+        assert fraction1.compareTo(fraction)<0;
         System.out.println(fraction.toString());
         System.out.println(fraction1.toString());
         System.out.println(fraction2.toString());
@@ -36,8 +44,8 @@ public class Main {
  
          // Si l'assertion passe, afficher un message de succès
          System.out.println("L'assertion a réussi, la somme est correcte : " + 
-                            (aNumber.doubleValue() + anotherNumber.doubleValue()));
+                            (aNumber.doubleValue() + anotherNumber.doubleValue()));          
     }
-
+    
 }
 
