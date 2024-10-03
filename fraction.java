@@ -53,7 +53,11 @@ public class Fraction {
          }
          Fraction other = (Fraction) obj;
          return this.numerateur == other.numerateur && this.denominateur == other.denominateur;
-     }
+    }
+    public int compareTo(Fraction other) {
+        // Compare a/b avec c/d en utilisant le produit croisé
+        return Integer.compare(this.numerateur * other.denominateur, other.numerateur * this.denominateur);
+    }
  
      // Calcul du PGCD
      private int pgcd(int a, int b) {
@@ -63,6 +67,7 @@ public class Fraction {
              a = temp;
          }
          return Math.abs(a); // Retourne la valeur absolue pour gérer les numérateurs négatifs
-     }
+    }
+    
  }
   

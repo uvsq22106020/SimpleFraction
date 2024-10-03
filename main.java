@@ -20,6 +20,9 @@ public class Main {
         System.out.println(fraction1 + " est égal à " + fraction2 + " : " + fraction1.equals(fraction2)); 
         System.out.println(fraction1 + " est égal à " + fraction + " : " + fraction1.equals(fraction)); 
         System.out.println(fraction + " est égal à " + fraction2 + " : " + fraction.equals(fraction2)); 
+        System.out.println(fraction1 + " est inférieur à " + fraction + " : " + (fraction1.compareTo(fraction) < 0)); 
+        System.out.println(fraction1 + " est supérieur à " + fraction2 + " : " + (fraction1.compareTo(fraction2) > 0));
     }
+
 }
 
