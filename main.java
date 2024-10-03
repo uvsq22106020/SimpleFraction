@@ -17,7 +17,9 @@ public class Main {
         System.out.println("Denominateur : " + fraction.getDenom());
         System.out.println("Valeur de la fraction : "+ fraction.division());
         System.out.println(fraction1 + " + " + fraction2 + " = " + result);
-
+        System.out.println(fraction1 + " est égal à " + fraction2 + " : " + fraction1.equals(fraction2)); 
+        System.out.println(fraction1 + " est égal à " + fraction + " : " + fraction1.equals(fraction)); 
+        System.out.println(fraction + " est égal à " + fraction2 + " : " + fraction.equals(fraction2)); 
     }
 }
 

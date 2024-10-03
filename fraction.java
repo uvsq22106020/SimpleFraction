@@ -42,4 +42,27 @@ public class Fraction {
     public double division(){
         return (double) numerateur/denominateur;
     }
-}   
+     // Surcharge de la méthode equals
+     @Override
+     public boolean equals(Object obj) {
+         if (this == obj) {
+             return true; // Vérifie si les références sont les mêmes
+         }
+         if (!(obj instanceof Fraction)) {
+             return false; // Vérifie si l'objet est une instance de Fraction
+         }
+         Fraction other = (Fraction) obj;
+         return this.numerateur == other.numerateur && this.denominateur == other.denominateur;
+     }
+ 
+     // Calcul du PGCD
+     private int pgcd(int a, int b) {
+         while (b != 0) {
+             int temp = b;
+             b = a % b;
+             a = temp;
+         }
+         return Math.abs(a); // Retourne la valeur absolue pour gérer les numérateurs négatifs
+     }
+ }
+  
