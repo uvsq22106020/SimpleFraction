@@ -10,6 +10,8 @@ public class Main {
         System.out.println(fraction.toString());
         System.out.println(fraction1.toString());
         System.out.println(fraction2.toString());
+        System.out.println(Fraction.UN.toString1());
+        System.out.println(Fraction.ZERO.toString1());
     }
 }
 
