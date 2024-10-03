@@ -27,6 +27,16 @@ public class Main {
         System.out.println("Valeur flottante : " + fraction.floatValue());
         System.out.println("Valeur double : " + fraction.doubleValue());
         System.out.println("Valeur courte : " + fraction.shortValue());
+         // Création d'une instance de BigDecimal
+         Number aNumber = java.math.BigDecimal.ONE; // Représente 1.0
+         Number anotherNumber = new Fraction(1, 2); // Représente 0.5
+ 
+         // Vérification de l'assertion
+         assert java.lang.Math.abs(aNumber.doubleValue() + anotherNumber.doubleValue() - 1.5) < 1E-8;
+ 
+         // Si l'assertion passe, afficher un message de succès
+         System.out.println("L'assertion a réussi, la somme est correcte : " + 
+                            (aNumber.doubleValue() + anotherNumber.doubleValue()));
     }
 
 }
