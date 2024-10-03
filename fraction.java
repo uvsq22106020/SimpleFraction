@@ -31,4 +31,7 @@ public class Fraction {
     public int getDenom(){
         return denominateur;
     }
+    public double division(){
+        return (double) numerateur/denominateur;
+    }
 }   

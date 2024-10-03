@@ -14,6 +14,7 @@ public class Main {
         System.out.println(Fraction.ZERO.toString1());
         System.out.println("Numerateur : " + fraction.getNum());
         System.out.println("Denominateur : " + fraction.getDenom());
+        System.out.println("Valeur de la fraction : "+ fraction.division());
     }
 }
 
