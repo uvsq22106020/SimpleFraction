@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction extends Number implements Comparable<Fraction>{
     private int numerateur;
     private int denominateur;
     public String toString() {
@@ -14,6 +14,10 @@ public class Fraction {
         }
         this.numerateur = numerateur;
         this.denominateur = denominateur;
+        // Réduction lors de la création de la fraction
+        int gcd = gcd(numerateur, denominateur);
+        this.numerateur = numerateur / gcd;
+        this.denominateur = denominateur / gcd;
     }
    // Constructeur avec juste le numérateur (dénominateur égal à 1)
    public Fraction(int numerateur) {
@@ -60,13 +64,39 @@ public class Fraction {
     }
  
      // Calcul du PGCD
-     private int pgcd(int a, int b) {
+     private int gcd(int a, int b) {
          while (b != 0) {
              int temp = b;
              b = a % b;
              a = temp;
          }
          return Math.abs(a); // Retourne la valeur absolue pour gérer les numérateurs négatifs
+    }
+    // Implémentation des méthodes de Number
+    @Override
+    public int intValue() {
+        return (int) division(); // Conversion en entier
+    }
+
+    @Override
+    public long longValue() {
+        return (long) division(); // Conversion en long
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) division(); // Conversion en float
+    }
+
+    @Override
+    public double doubleValue() {
+        return division(); // Conversion en double
+    }
+
+
+    @Override
+    public short shortValue() {
+        return (short) intValue(); // Conversion en short
     }
     
  }

@@ -22,6 +22,11 @@ public class Main {
         System.out.println(fraction + " est égal à " + fraction2 + " : " + fraction.equals(fraction2)); 
         System.out.println(fraction1 + " est inférieur à " + fraction + " : " + (fraction1.compareTo(fraction) < 0)); 
         System.out.println(fraction1 + " est supérieur à " + fraction2 + " : " + (fraction1.compareTo(fraction2) > 0));
+        System.out.println("Valeur entière : " + fraction.intValue());
+        System.out.println("Valeur longue : " + fraction.longValue());
+        System.out.println("Valeur flottante : " + fraction.floatValue());
+        System.out.println("Valeur double : " + fraction.doubleValue());
+        System.out.println("Valeur courte : " + fraction.shortValue());
     }
 
 }
