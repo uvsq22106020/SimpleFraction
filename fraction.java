@@ -25,6 +25,14 @@ public class Fraction {
     }
     public static final Fraction UN = new Fraction(1,1);
     public static final Fraction ZERO = new Fraction(0,1);
+
+    // Méthode pour additionner deux fractions
+    public Fraction add(Fraction other) {
+        int newNumerateur = this.numerateur * other.denominateur + other.numerateur * this.denominateur;
+        int newDenominateur = this.denominateur * other.denominateur;
+        return new Fraction(newNumerateur, newDenominateur);
+    }    
+
     public int getNum(){
         return numerateur;
     }

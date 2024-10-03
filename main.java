@@ -3,6 +3,7 @@ public class Main {
         Fraction fraction = new Fraction(11,7);
         Fraction fraction1 = new Fraction(2);
         Fraction fraction2 = new Fraction();
+        Fraction result = fraction1.add(fraction2);
 
         assert fraction.toString() == "je suis une fraction avec comme numerateur :11 et comme denominateur : 7";
         assert fraction1.toString() == "je suis une fraction avec comme numerateur :2 et comme denominateur : 1";
@@ -15,6 +16,8 @@ public class Main {
         System.out.println("Numerateur : " + fraction.getNum());
         System.out.println("Denominateur : " + fraction.getDenom());
         System.out.println("Valeur de la fraction : "+ fraction.division());
+        System.out.println(fraction1 + " + " + fraction2 + " = " + result);
+
     }
 }
 
