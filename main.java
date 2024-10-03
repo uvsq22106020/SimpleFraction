@@ -12,6 +12,8 @@ public class Main {
         System.out.println(fraction2.toString());
         System.out.println(Fraction.UN.toString1());
         System.out.println(Fraction.ZERO.toString1());
+        System.out.println("Numerateur : " + fraction.getNum());
+        System.out.println("Denominateur : " + fraction.getDenom());
     }
 }
 
