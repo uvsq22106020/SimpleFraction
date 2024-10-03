@@ -2,7 +2,7 @@ public class Fraction {
     private int numerateur;
     private int denominateur;
     public String toString() {
-        return " je suis une fraction avec comme numerateur :" + numerateur + "et comme denominateur" + denominateur;
+        return " je suis une fraction avec comme numerateur :" + numerateur + "et comme denominateur :" + denominateur;
     }    
     public Fraction(int numerateur, int denominateur) {
         if (denominateur == 0) {
